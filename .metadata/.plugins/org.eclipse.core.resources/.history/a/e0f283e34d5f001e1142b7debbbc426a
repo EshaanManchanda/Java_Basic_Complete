@@ -1,0 +1,89 @@
+package MainPackage;
+import TrickyQuestion.*;
+import java.util.Scanner;
+
+public class FullProject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		int exit=1;
+		System.out.println("Welcome to Project. \n");
+		do {			
+			System.out.println("Select you topic: ");
+			System.out.println("0. Exit");
+			System.out.println("1. TrickyQuestion");
+			int project=in.nextInt();
+			switch(project){
+			case 0:
+				System.out.println("Thank you for using the program \nHave a nice day");
+				break;
+			case 1:
+				trickyQuestion();
+				break;
+			}
+		}while(exit!=0);
+		
+		in.close();
+	}
+
+	static void trickyQuestion()
+	{
+		System.out.println("\n");
+		System.out.println("0. For Exit.");
+		System.out.println("1. Armstrong Number.");
+		System.out.println("2. Factorial.");
+		System.out.println("3. Fibonacci Series.");
+		System.out.println("4. Maximum from 3 number.");
+		System.out.println("5. Palindrome.");
+		System.out.println("6. Prime Number.");
+		System.out.println("7. Print prime number.");
+		System.out.println("8. Sum of two number.");
+		System.out.print("\n Enter number: ");
+		Scanner enter=new Scanner(System.in);
+		int que=enter.nextInt();
+		System.out.println("\n");
+		switch(que){
+		case 0:
+			break;
+		case 1:
+			enter.close();
+			Armstrong.isArmstrong();
+			trickyQuestion();
+			break;
+		case 2:
+			Factorial.getFactorial();
+			enter.close();
+			trickyQuestion();
+			break;
+		case 3:
+			Fibonacci_series.series();
+			trickyQuestion();
+			break;
+		case 4:
+			maximum3num.max3num();
+			trickyQuestion();
+			break;
+		case 5:
+			Palindrome.palindtromeObj();
+			trickyQuestion();
+			break;
+		case 6:
+			primeNumber.primeNum();
+			trickyQuestion();
+			break;
+		case 7:
+			printPrimeNum.printPrime();
+			trickyQuestion();
+			break;
+		case 8:
+			sum2num.sum();
+			trickyQuestion();
+			break;
+		default:
+			System.out.println("invalid input");
+			trickyQuestion();
+		}
+		enter.close();
+	}
+}

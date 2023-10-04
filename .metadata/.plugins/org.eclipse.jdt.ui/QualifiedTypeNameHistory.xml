@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="ArrayQ.Array_Input"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.sum2num"/>
+    <fullyQualifiedTypeName name="InputOutput.TrickyQustion_IO"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.maximum3num"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.primeNumber"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.printPrimeNum"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.Fibonacci_series"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.Palindrome"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.Factorial"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.Armstrong"/>
+    <fullyQualifiedTypeName name="InputOutput.TrickyQuestion_IO"/>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="TrickyQuestion.EvenandOdd"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="InputOutput.pattern_IO"/>
+</qualifiedTypeNameHistroy>

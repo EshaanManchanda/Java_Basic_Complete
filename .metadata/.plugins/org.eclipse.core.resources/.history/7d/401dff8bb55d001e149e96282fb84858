@@ -1,0 +1,16 @@
+package TrickyQuestion;
+import InputOutput.TrickyQuestion_IO;
+public class sum2num {
+	
+	public static void sum()
+	{
+		TrickyQuestion_IO.twoDigIO();
+		
+		System.out.println("Sum is "+TrickyQuestion_IO.val1+TrickyQuestion_IO.val2);
+	}
+	public static int sum(int a , int b)
+	{
+		return a+b;
+	}
+
+}

@@ -1,0 +1,95 @@
+package MainPackage;
+import TrickyQuestion.*;
+import java.util.Scanner;
+
+public class FullProject {
+	static int list=0;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner enter=new Scanner(System.in);
+		int exit=1;
+		System.out.println("Welcome to Project. \n");
+		do {			
+			System.out.println("Select you topic: ");
+			System.out.println("0. Exit");
+			System.out.println("1. TrickyQuestion");
+			System.out.print("\n Enter number: ");
+			int project=questionNo();
+			switch(project){
+			case 0:
+				exit=0;
+				System.out.println("\nThank you for using the program \nHave a nice day");
+				break;
+			case 1:
+				
+				do {
+					System.out.println("\n");
+					System.out.println("0. For Exit.");
+					System.out.println("1. Armstrong Number.");
+					System.out.println("2. Factorial.");
+					System.out.println("3. Fibonacci Series.");
+					System.out.println("4. Maximum from 3 number.");
+					System.out.println("5. Palindrome.");
+					System.out.println("6. Prime Number.");
+					System.out.println("7. Print prime number.");
+					System.out.println("8. Sum of two number.");
+					System.out.print("\n Enter number: ");
+					list=questionNo();
+					System.out.println("\n");
+					switch(list){
+					case 0:
+						break;
+					case 1:
+						Armstrong armstrong=new Armstrong();
+						armstrong.isArmstrong();
+						break;
+					case 2:
+						Factorial fact=new Factorial();
+						fact.getFactorial();
+						break;
+					case 3:
+						Fibonacci_series fibonacci=new Fibonacci_series();
+						fibonacci.series();
+						break;
+					case 4:
+						maximum3num maxof3=new maximum3num();
+						maxof3.max3num();
+						break;
+					case 5:
+						Palindrome.palindtromeObj();
+						break;
+					case 6:
+						primeNumber.primeNum();
+						break;
+					case 7:
+						printPrimeNum.printPrime();
+						break;
+					case 8:
+						sum2num.sum();
+						break;
+					default:
+						System.out.println("invalid input");
+					}
+					
+				}while(list!=0);
+			}
+		}while(exit!=0);
+		enter.close();
+
+	}
+	static int questionNo()
+	{
+		Scanner enter=new Scanner(System.in);
+		int list;
+		if(enter.hasNext())
+		{			
+			list=enter.nextInt();
+		}
+		else {
+			list=0;
+		}
+		return list;
+	}
+
+}

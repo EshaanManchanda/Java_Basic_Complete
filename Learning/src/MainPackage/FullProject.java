@@ -1,0 +1,190 @@
+package MainPackage;
+import TrickyQuestion.*;
+import Patterns.*;
+import java.util.Scanner;
+
+public class FullProject {
+	static int list=0;
+	static int exit=1;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner enter=new Scanner(System.in);
+		System.out.println("Welcome to Project. \n");
+		do {			
+			System.out.println();
+			System.out.println("Select you topic: ");
+			System.out.println("0. Exit");
+			System.out.println("1. TrickyQuestion");
+			System.out.println("2. Patterns");
+			System.out.print("\n Enter number: ");
+			int project=questionNo();
+			mainMenu(project);
+			
+		}while(exit!=0);
+		enter.close();
+
+	}
+	static int questionNo()
+	{
+		Scanner enter=new Scanner(System.in);
+		int list;
+		if(enter.hasNext())
+		{			
+			list=enter.nextInt();
+		}
+		else {
+			list=0;
+		}
+		return list;
+	}
+	static void mainMenu(int project)
+	{
+		switch(project){
+		case 0:
+			exit=0;
+			System.out.println("\nThank you for using the program \nHave a nice day");
+			break;
+		case 1:	
+			do {
+				System.out.println("\n");
+				System.out.println("0. Previous Menu.");
+				System.out.println("1. Armstrong Number.");
+				System.out.println("2. Factorial.");
+				System.out.println("3. Fibonacci Series.");
+				System.out.println("4. Maximum from 3 number.");
+				System.out.println("5. Palindrome.");
+				System.out.println("6. Prime Number.");
+				System.out.println("7. Print prime number.");
+				System.out.println("8. Sum of two number.");
+				System.out.print("\n Enter number: ");
+				list=questionNo();
+				trickyQuestion(list);
+			}while(list!=0);
+			break;
+		case 2:
+			do {
+				System.out.println("\n");
+				System.out.println("0. Previous Menu");
+				System.out.println("1. Stars");
+				System.out.println("2. Number");
+				System.out.println("3. Character");
+				System.out.print("\n Enter number: ");
+				list=questionNo();
+				patternQuestion(list);
+			}while(list!=0);
+			break;
+		default:
+			System.out.println("Invalid Input");
+		}
+	}
+	static void trickyQuestion(int list)
+	{
+		switch(list){
+		case 0:
+			break;
+		case 1:
+			Armstrong armstrong=new Armstrong();
+			armstrong.isArmstrong();
+			break;
+		case 2:
+			Factorial fact=new Factorial();
+			fact.getFactorial();
+			break;
+		case 3:
+			Fibonacci_series fibonacci=new Fibonacci_series();
+			fibonacci.series();
+			break;
+		case 4:
+			maximum3num maxof3=new maximum3num();
+			maxof3.max3num();
+			break;
+		case 5:
+			Palindrome palindrome=new Palindrome();
+			palindrome.palindtromeObj();
+			break;
+		case 6:
+			primeNumber primenum=new primeNumber();
+			primenum.primeNum();
+			break;
+		case 7:
+			printPrimeNum printprime=new printPrimeNum();
+			printprime.printPrime();
+			break;
+		case 8:
+			sum2num sumof2=new sum2num();
+			sumof2.sum();
+			break;
+		default:
+			System.out.println("invalid input");
+		}
+	}
+	static void patternQuestion(int list)
+	{
+		switch(list) {
+		case 0:
+			break;
+		case 1:
+			do {
+			System.out.println("\n");
+			System.out.println("0. Previous Menu");
+			System.out.println("1. Rectangle or Square");
+			System.out.println("2. Hollow Rectangle or Square");
+			System.out.println("3. Rhombus");
+			System.out.println("4. Triangle");
+			System.out.println("5. Hollow Triangle");
+			System.out.println("6. Reverse Triangle");
+			System.out.println("7. Half Pyramid");
+			System.out.println("8. Inverted Half Pyramid");
+			System.out.println("9. Hollow Inverted Half Pyramid");
+			System.out.println("10. Diamond");
+			System.out.print("\n Enter number: ");
+			list=questionNo();
+			patternStar(list);
+			}while(list!=0);
+			break;
+		default:
+			System.out.println("Invalid Input");
+		}
+	}
+	static void patternStar(int list)
+	{
+		switch(list)
+		{
+		case 1:
+			RectangleOrSquare obj1=new RectangleOrSquare();
+			obj1.print();
+			break;
+		case 2:
+			RectangleOrSquare obj2=new RectangleOrSquare();
+			obj2.printHollow();
+			break;
+		case 3:
+			Rhombus obj3=new Rhombus();
+			obj3.print();
+			break;
+		case 4:
+			Triangle obj4=new Triangle();
+			obj4.print();
+		case 5:
+			Triangle obj5=new Triangle();
+			obj5.hollow();
+		case 6:
+			Triangle obj6=new Triangle();
+			obj6.reverse();
+		case 7:
+			Triangle obj7=new Triangle();
+			obj7.halfPyramid();
+		case 8:
+			Triangle obj8=new Triangle();
+			obj8.invertedHalfPyramid();
+		case 9:
+			Triangle obj9=new Triangle();
+			obj9.hollowInvertedHalfPyramid();
+		case 10:
+			Triangle obj10=new Triangle();
+			obj10.diamond();
+		}
+	}
+
+}
